@@ -2,16 +2,14 @@
 import { ref, onMounted } from 'vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
+// import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import '@splinetool/viewer';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 
 // Navbar reference
 const navbar = ref(null);
 const aboutSection = ref(null);
-const smoothWrapper = ref(null);
-const smoothContent = ref(null);
 
 onMounted(() => {
   // Slide in the navbar from the top
@@ -33,17 +31,7 @@ onMounted(() => {
     }
   });
 
-  // Scroll-triggered scale effect on experimental section
-  gsap.from(".experiment-box", {
-    scale: 0.8,
-    opacity: 0,
-    duration: 1.5,
-    scrollTrigger: {
-      trigger: ".experiment-section",
-      start: "top 75%",
-      toggleActions: "play none none reverse",
-    }
-  });
+
 
 
 });
