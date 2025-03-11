@@ -39,7 +39,7 @@ onMounted(() => {
     <div class="hero-content">
       <div class="big-text">
         <span
-          v-for="(letter, index) in 'Bridging UX Code Interactive Worlds'"
+          v-for="(letter, index) in 'Bridging UX Code & Interactive Worlds'"
           :key="index"
           ref="letters"
           class="letter"
