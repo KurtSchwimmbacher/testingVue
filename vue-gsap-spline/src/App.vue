@@ -17,10 +17,10 @@ import NavigationBar from './components/NavigationBar.vue';
     <NavigationBar />
     <Hero />
     
-<!-- 
-    <div  ref="hero" class="hero">
+
+    <div  ref="spline" class="spline">
       <spline-viewer url="https://prod.spline.design/7a9DMp8cKTGnbXCs/scene.splinecode"></spline-viewer>
-    </div> -->
+    </div>
 
 
   </div>
@@ -33,6 +33,12 @@ import NavigationBar from './components/NavigationBar.vue';
 
 html, body {
   scroll-behavior: smooth;
+}
+
+.spline{
+  z-index: -5;
+  position: absolute;
+  top: 0;
 }
 
 </style>
